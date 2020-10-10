@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+ <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<style>
+   
+.wrapper{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 80rem;
+    margin-top: 84px;
+}
+
+.cols{
+  display: -webkit-box;   
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+    
+}
+
+.col{
+  width: calc(25% - 2rem);
+  margin: 1rem;
+  cursor: pointer;
+    margin-left: -5px;
+    margin-bottom: -5px;
+}
+
+.container{
+        transform-style: preserve-3d;
+		perspective: 1000px;
+		
+}
+
+.front,
+.back{
+  background-size: cover;
+	background-position: center; 
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+     backface-visibility: hidden;
+	text-align: center;
+	min-height: 280px;
+	height: auto; 
+	color: #fff;
+	font-size: 1rem;
+}
+
+.back{
+  background: #fff;  
+  background: linear-gradient(45deg,  #fd0d44 0%,#1463e2 100%);
+}
+
+.front:after{
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+        
+    backface-visibility: hidden;
+     
+}
+.container:hover .front,
+.container:hover .back{
+     
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+     
+}
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.inner{
+  
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;     
+    box-sizing: border-box;
+    outline: 1px solid transparent;     
+    perspective: inherit;
+    z-index: 2;
+}
+
+.container .back{    
+    transform: rotateY(180deg);     
+    transform-style: preserve-3d;
+}
+
+.container .front{
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+}
+
+.container:hover .back{
+   transform: rotateY(0deg);
+   transform-style: preserve-3d;
+}
+
+.container:hover .front{
+      transform: rotateY(-180deg);
+      transform-style: preserve-3d;
+}
+
+.front .inner p{
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.front .inner p:after{
+  content: '';
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #fff;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -.75rem;
+}
+
+.front .inner span{
+  color: fff;   
+  font-family: 'Roboto Condensed', sans-serif;   
+  font-weight: 300;
+}
+
+@media screen and (max-width: 64rem){
+  .col{
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48rem){
+  .col{
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 32rem){
+  .col{
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+</style>
+<body>
+
+<header class="site-header clearfix">
+ <nav>
+  <div class="logo">
+   <h1>Modern Website</h1>
+  </div>
+  <div class="menu">
+   
+   <ul>
+    <div class="rightside"> 
+
+    <button><li>Home</li></button>
+    <button ><li>Services</li></button>
+    <button > <li>AboutUs</li></button>
+   
+</div>
+    </ul>
+
+   
+  </div>
+ </nav>
+ <section>
+    <div class="wrapper">   
+        <div class="cols">
+                  <div class="col">
+                      <div class="container">
+                          <div class="front" style="background-image: url(python2.jpg)">
+                               
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                <p>Python is an interpreted, high-level and general-purpose programming language. Created by Guido van Rossum and first released in 1991. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="container">
+                          <div class="front" style="background-image: url(download7.png)">
+                           </div>
+                          <div class="back">
+                              <div class="inner">
+                                  <p>C++ is a powerful general-purpose programming language. It can be used to develop operating systems, browsers, games, and so on. C++ supports different ways of programming like procedural, object-oriented, functional, and so on. This makes C++ powerful as well as flexible.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="container">
+                          <div class="front" style="background-image: url(download6.jpg)">
+                               
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                  <p>C# (pronounced see sharp) is a general-purpose, multi-paradigm programming language encompassing strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented , and component-oriented programming disciplines. </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="container">
+                          <div class="front" style="background-image: url(download10.png)">
+                               
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                  <p>Go is a statically typed, compiled programming language designed at Google[14] by Robert Griesemer, Rob Pike, and Ken Thompson. Go is syntactically similar to C .The language is often referred to as Golang because of its domain name, golang.org, but the proper name is Go.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="container">
+                          <div class="front" style="background-image: url(download5.jpg)">
+                               
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                  <p>Swift is a general-purpose, multi-paradigm, object-oriented, functional, imperative and block structured language. It is the result of the latest research on programming languages and is built using a modern approach to safety, software design patterns by Apple Inc..</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="container">
+                          <div class="front" style="background-image: url(download9.jpg)">
+                                
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                  <p>Kotlin is a statically typed, general-purpose programming language developed by JetBrains, that has built world-class IDEs like IntelliJ IDEA, PhpStorm, Appcode, etc. It was first introduced by JetBrains in 2011 and a new language for the JVM. Kotlin is object-oriented language.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="container">
+                          <div class="front" style="background-image: url(download8.png)">
+                           
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                  <p>Scala is a general-purpose, high-level, multi-paradigm programming language. It is a pure object-oriented programming language which also provides support to the functional programming approach. Scala stands for Scalable language. It also provides Javascript runtimes</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="container">
+                          <div class="front" style="background-image: url(download11.jpg)">
+                               
+                          </div>
+                          <div class="back">
+                              <div class="inner">
+                                  <p>MATLAB is a proprietary multi-paradigm programming language and numerical computing environment developed by MathWorks. MATLAB allows matrix manipulations, plotting of functions and data, implementation of algorithms.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+       </div>
+    </div>
+  <div class="rightside"> 
+   <h1> Programming Language </h1>
+   <p> A programming language is a formal language comprising a set of instructions that produce various kinds of output. Programming languages are used in computer programming to implement algorithms.  </p>
+   <button>Let's Explore</button>
+  </div>
+  
+ </section>
+
+</header>
+
+
+</body>
+</html>
